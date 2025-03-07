@@ -1,0 +1,34 @@
+mixin pokemonCard(pokemon)
+
+    div.card
+        div.card-header
+            div.edit
+                a(href='#') Edit
+            div.card-title=pokemon.name
+            img.card-type(src = pokemon.type)
+            img.card-type(src = pokemon.type2)
+            div.card-hp=pokemon.health
+            img.card-name(src=pokemon.pokemon_image)
+        div.card-body
+            img.type-skill-image(src=pokemon.move_type)
+            img.type-skill-image(src=pokemon.second_move_type)
+            div.skill=pokemon.skill
+            div.damage=pokemon.damage
+        div.card-body
+            img.type-skill-image2(src=pokemon.move_type2)
+            img.type-skill-image2(src=pokemon.second_move_type2)
+            div.skill2=pokemon.skill2
+            div.damage2=pokemon.damage2
+            div.row
+                br
+                div.weak weakness
+                    div.row
+                    img.type-cost-image(src = pokemon.weakness)
+                div.resist resistance
+                    div.row
+                    img.type-cost-image(src =pokemon.resist)
+
+                div.retreat retreat cost
+                    div.row
+                    -for (let i = 0; i < pokemon.retreat_cost; i++)
+                    img.type-cost-image(src = pokemon.retreat)

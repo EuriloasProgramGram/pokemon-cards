@@ -4,3 +4,5 @@ const pokemonController = require('../controllers/pokemonController');
 
 /* GET home page. */
 router.get('/', pokemonController.viewAll);
+
+module.exports = router;
