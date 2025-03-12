@@ -1,6 +1,6 @@
 mixin pokemonCard(pokemon)
 
-    div.card
+    div.card(class=pokemon.ptype)
         div.card-header
             div.edit
                 a(href='#') Edit
@@ -8,7 +8,7 @@ mixin pokemonCard(pokemon)
             img.card-type(src = pokemon.type)
             img.card-type(src = pokemon.type2)
             div.card-hp=pokemon.health
-            img.card-name(src=pokemon.pokemon_image)
+            img.card-name(class=pokemon.ptype2)(src=pokemon.pokemon_image)
         div.card-body
             img.type-skill-image(src=pokemon.move_type)
             img.type-skill-image(src=pokemon.second_move_type)

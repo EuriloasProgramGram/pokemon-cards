@@ -2,6 +2,6 @@ extends layout
 
 block content
   include mixins/pokemonCard
-  each pokemon in pokemons
-    div.container
+  div.container(class="cardcontainer")
+    each pokemon in pokemons
       +pokemonCard(pokemon)
