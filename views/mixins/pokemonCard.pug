@@ -3,7 +3,7 @@ mixin pokemonCard(pokemon)
     div.card(class=pokemon.ptype)
         div.card-header
             div.edit
-                a(href='#') Edit
+                a(href=`/edit/${pokemon.id}`) Edit
             div.card-title=pokemon.name
             img.card-type(src = pokemon.type)
             img.card-type(src = pokemon.type2)
