@@ -1,0 +1,79 @@
+mixin pokemonForm(pokemon, actionURL, mode, title)
+    div.form-panel
+        div.header= title
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name='name' value=pokemon.name)
+                div.form-input
+                    label(for='health') Hp:
+                    input(type='text' id='health' name='health' value=pokemon.health)
+                    div.form-input
+                        label(for='type') Type:
+                        select(id='type' name='type' autocomplete='off')
+                            each type in types
+                                option(value=type selected = type === pokemon.type) #{type}
+                    div.form-input
+                        label(for='type2') Type2:
+                        select(id='type2' name='type2' autocomplete='off')
+                            each type2 in types
+                                option(value=type2 selected = type2 === pokemon.type) #{type2}
+                div.form-input
+                    label(for='ptype') Color of Card:
+                    select(id='ptype' name='ptype' autocomplete='off')
+                        each ptype in ptypes
+                            option(value=ptype selected = ptype === pokemon.ptype) #{ptype}
+                div.form-input
+                    label(for='ptype2') Color of Card2:
+                    select(id='ptype2' name='ptyp2e' autocomplete='off')
+                        each ptype2 in ptypes2
+                            option(value=ptype2 selected = ptype2 === pokemon.ptype) #{ptype2}
+                div.form-input
+                    label(for='image') Pokemon Image:
+                    input(type='text' id='image' name='image' value=pokemon.pokemon_image)
+                div.form-input
+                    label(for='move-set') First move-set:
+                    input(type='text' id='move-set' name='move-set' value=pokemon.move_type)
+                div.form-input
+                    label(for='second-move-set') Second move-set:
+                    input(type='text' id='second-move-set' name='second-move-set' value=pokemon.second_move_type)
+                div.form-input
+                    label(for='skill') Skill set:
+                    textarea(id='skill' name='skill') #{pokemon.skill}
+                div.form-input
+                    label(for='damage') Damage:
+                    input(type='text' id='damage' name='damage' value=pokemon.damage)
+                div.form-input
+                    label(for='move_type2') First move-set2:
+                    input(type='text' id='move_type2' name='move_type2' value=pokemon.move_type2)
+                div.form-input
+                    label(for='second-move-set2') Second move-set2:
+                    input(type='text' id='second-move-set2' name='second-move-set2' value=pokemon.second_move_type2)
+                div.form-input
+                    label(for='skill2') Skill set:
+                    textarea(id='skill2' name='skill2') #{pokemon.skill2}
+                div.form-input
+                    label(for='damage2') Damage:
+                    input(type='text' id='damage2' name='damage2' value=pokemon.damage2)
+                div.form-input
+                    label(for='weakness') Weakness:
+                    select( id='weakness' name='weakness' autocomplete='off')
+                        each weakness in types
+                            option(value=weakness selected = weakness === pokemon.type) #{weakness}
+                div.form-input
+                    label(for='resist') resistance:
+                    select( id='resist' name='resist' autocomplete='off')
+                        each resist in types
+                            option(value=resist selected = resist === pokemon.type) #{resist}
+                div.form-input
+                    label(for='retreat') Retreat:
+                    select( id='retreat' name='retreat')
+                        each retreat in types
+                            option(value=retreat selected = retreat === pokemon.type) #{retreat}
+                    div.button-row
+                        a.button.cancel(href='/') Cancel
+                        if (mode='edit')
+                            a.button.delete(href=`/delete/${pokemon.id}`) Delete
+                        button.button.save(type='submit') Submit
+
+

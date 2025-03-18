@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.STRING,
     type2: DataTypes.STRING,
     pokemon_image: DataTypes.STRING,
-    move_type :DataTypes.STRING,
+    move_type: DataTypes.STRING,
     second_move_type: DataTypes.STRING,
     skill: DataTypes.STRING,
     damage:DataTypes.INTEGER,
