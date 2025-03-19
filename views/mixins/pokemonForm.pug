@@ -25,7 +25,7 @@ mixin pokemonForm(pokemon, actionURL, mode, title)
                             option(value=ptype selected = ptype === pokemon.ptype) #{ptype}
                 div.form-input
                     label(for='ptype2') Color of Card2:
-                    select(id='ptype2' name='ptyp2e' autocomplete='off')
+                    select(id='ptype2' name='ptype2' autocomplete='off')
                         each ptype2 in ptypes2
                             option(value=ptype2 selected = ptype2 === pokemon.ptype) #{ptype2}
                 div.form-input

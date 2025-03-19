@@ -213,3 +213,10 @@ font-size: 20px;
   margin-top: 50px;
   padding: 24px;
 }
+
+.main-header{
+  background: #242323;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
